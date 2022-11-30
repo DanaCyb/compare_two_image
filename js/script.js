@@ -10,7 +10,7 @@ function startComparisonTool(){
         h = img.offsetHeight;
         img.style.width = (w / 2) + "px";
         slider = document.createElement("DIV");
-        slider.setAttribute("class", "slider");
+        slider.setAttribute("class","slider");
         img.parentElement.insertBefore(slider,img);
 
         slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
@@ -38,7 +38,7 @@ function startComparisonTool(){
             if(vertLinePos > 0) vertLinePos = w;
             makeYourSlide(vertLinePos);
         }
-        function makeYourSlide(e){
+        function getCursorPosition(e){
             var compareObj, x = 0;
             e = (e.changedTouches) ? e.changedTouches[0] : e;
             compareObj = img.getBoundingClientRect();
